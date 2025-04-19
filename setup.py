@@ -7,7 +7,7 @@ if sys.version_info < (3, 10):
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
-    
+
 setup(
     name="unavlib",
     packages=[package for package in find_packages()],
@@ -21,7 +21,7 @@ setup(
     url="https://github.com/xznhj8129/uNAVlib",
     download_url="",
     keywords=['Betaflight', 'iNAV', 'drone', 'UAV', 'Multi Wii Serial Protocol', 'MSP'],
-    install_requires=['pyserial','asyncio','simple-pid','geographiclib','mgrs','geojson'],
+    install_requires=['packaging', 'pyserial','asyncio','simple-pid','geographiclib','mgrs','geojson'],
     classifiers=[
           'Development Status :: 4 - Beta',
           'Intended Audience :: Developers',
