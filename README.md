@@ -79,6 +79,11 @@ If you can't connect (talk) to the FC:
 6. Appease the machine-spirit
 
 ## Installation:
+First of all, you'll need the `setuptools` package installed  
+```
+$ pip install setuptools
+```
+
 Option #1: Clone the repo so you will have the examples
 ```
 $ git clone https://github.com/medvedev/uNAVlib.git
