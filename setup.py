@@ -2,7 +2,6 @@ import re
 import sys
 from setuptools import setup, find_packages
 from pathlib import Path
-from unavlib import __version__
 
 if sys.version_info < (3, 10):
     sys.exit('Sorry, Python < 3.10 is not supported.')
