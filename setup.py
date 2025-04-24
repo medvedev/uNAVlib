@@ -1,5 +1,7 @@
+import re
 import sys
 from setuptools import setup, find_packages
+from pathlib import Path
 from unavlib import __version__
 
 if sys.version_info < (3, 10):
@@ -8,10 +10,19 @@ if sys.version_info < (3, 10):
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
+def get_version():
+    init_path = Path(__file__).parent / "unavlib" / "__init__.py"
+    with init_path.open("r") as f:
+        content = f.read()
+    version_match = re.search(r"^__version__ = ['\"]([^'\"]*)['\"]", content, re.M)
+    if version_match:
+        return version_match.group(1)
+    raise RuntimeError("Unable to find version string.")
+
 setup(
     name="unavlib",
     packages=[package for package in find_packages()],
-    version=__version__,
+    version=get_version(),
     license="GPL",
     description="MultiWii Serial Protocol autonomous flight SDK for INAV",
     long_description=long_description,
