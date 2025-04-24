@@ -83,12 +83,12 @@ Option #1: Clone the repo so you will have the examples
 ```
 $ git clone https://github.com/medvedev/uNAVlib.git
 $ cd unavlib
-$ sudo pip3 install .
+$ pip3 install .
 ```
 
 Option #2: Install directly from git (the `--upgrade` is to make sure it will install the last commit, even if the version number didn't increase)
 ```
-$ sudo pip3 install git+https://github.com/medvedev/uNAVlib --upgrade
+$ pip3 install git+https://github.com/medvedev/uNAVlib --upgrade
 
 ```
 or to select a branch (e.g. [proxy](https://github.com/medvedev/uNAVlib/tree/proxy)):
